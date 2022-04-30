@@ -4,9 +4,9 @@ puts "Enter a number to determine how much to shift the string!"
 number = gets.to_i
 
 def caesar(str = "Caesar", shift = 0)
-  num_arr = str.split("").map { |el| el = el.ord }
-  shifted_arr = num_arr.map { |el| mod(el, shift) }
-  puts shifted_arr.map { |el| el = el.chr }.join("")
+  return puts str if shift == 0
+  shifted_num_arr = str.split("").map { |el| el = mod(el.ord, shift) }
+  puts shifted_num_arr.map { |el| el = el.chr }.join("")
 end
 
 def mod(number, shift)
