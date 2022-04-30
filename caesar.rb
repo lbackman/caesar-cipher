@@ -11,9 +11,9 @@ end
 
 def mod(number, shift)
   if (65..90).include?(number)
-    ((((number - 65) + shift) % 26) + 26) % 26 + 65
+    (((number - 65 + shift) % 26) + 26) % 26 + 65
   elsif (97..122).include?(number)
-    ((((number - 97) + shift) % 26) + 26) % 26 + 97
+    (((number - 97 + shift) % 26) + 26) % 26 + 97
   else
     number
   end
