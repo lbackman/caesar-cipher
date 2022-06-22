@@ -1,10 +1,12 @@
-puts "Enter a string to shift!"
-input = gets.chomp
-puts "Enter a number to determine how much to shift the string!"
-number = gets.to_i
+# caesar.rb
+
+# puts "Enter a string to shift!"
+# input = gets.chomp
+# puts "Enter a number to determine how much to shift the string!"
+# number = gets.to_i
 
 def caesar(str = "Caesar", shift = 0)
-  puts str.split("").map { |ch| ch = mod(ch.ord, shift) }
+  str.split("").map { |ch| ch = mod(ch.ord, shift) }
     .map { |n| n = n.chr }.join("")
 end
 
@@ -18,4 +20,4 @@ def mod(number, shift)
   end
 end
 
-caesar(input, number)
+# caesar(input, number)
